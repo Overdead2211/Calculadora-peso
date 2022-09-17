@@ -1,0 +1,189 @@
+<!DOCTYPEhtml>
+<html lang="pt-BR">
+   <cabeça>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <title>Modelo</title>
+      <link rel="stylesheet" href="C:\Users\20201450084\Desktop\projeto\css2" />   
+      <estilo>
+        *{
+margem: 0;
+preenchimento: 0;
+}
+.a Principal{
+        cor de fundo: ;
+        cor branca;
+        altura: automático;
+        largura: 270px;
+        preenchimento: 20px;
+        raio da borda: centro;
+        alinhamento de texto: centro;
+}
+.btn{
+    altura: automático;
+    largura: 40px;
+}
+corpo{
+    cor de fundo: cinza;
+}
+p{
+   cor: milho;
+}
+h1{
+   cor: milho;
+}
+h3{
+   cor: milho;
+}
+rodapé{
+   cor: milho;
+   text-align: direita;
+}
+etiqueta{
+   cor: milho;
+}
+tabela{
+   cor da borda: preto;
+   tamanho da guia: 20px;
+}
+#resultado{
+   tamanho da fonte: 25px;
+}
+         
+     </style>
+   </head>
+
+   <corpo>
+      <section class="container">
+         <h1>Tabela do IMC</h1><br>
+         <artigo>
+            <div class="IMC">
+               <table border="1">
+               <h3>IMC</h3><br>
+               <tr>
+               <td><p>Menos do que 18,5</p></td>
+               <td><p>Abaixo do peso</p></td>
+            </tr>
+         <tr>
+              <td><p>Entre 18,5 e 24,9</p></td>
+              <td><p>Peso normal</p></td>
+            </tr>
+            <tr><td><p>Entre 25 e 29,9</p></td>
+               <td><p>Sobrepeso</p></td></tr>
+            <tr><td><p>Entre 30 e 34,9</p></td>
+               <td><p>Obesidade grau 1</p></td></tr>
+            <tr><td><p>Entre 35 e 39,9</p></td>
+               <td><p>Obesidade grau 2</p></td></tr>
+            <tr><td><p>Mais do que 40</p></td>
+               <td> <p>Obesidade grau 3</p></td></tr>
+               
+               
+               
+               
+            </table>
+            </div>
+            <div class="resultado">
+            <td> <h3>Resultado</h3></td>
+         
+              
+               
+               
+               
+              
+            </div>
+         </article>
+         <br>
+         <h1>Cálculo ou IMC</h1>
+         <form action="" autocomplete="off">
+            <label for="input-teste-1">Peso:</label>
+            <input type="number" placeholder=" use o '.'caso necessário" id="peso" />
+
+            <label for="input-teste-2">Altura:</label>
+            <input type="number" placeholder=" use o '.' caso necessário" id="altura" />
+            <button onclick="validate()">Calcular</button>
+
+         </form>
+         
+         <hr>
+         
+         <h3>Resultado:</h3>
+         <p id="resultado"></p>
+</body>
+<script>
+     função validar()
+     {
+         peso const = document.getElementById('peso');
+         const altura = document.getElementById('altura');
+         peso.style.border = 'nenhum';
+         altura.style.border = 'nenhuma';
+         if(!peso.value || !altura.value)
+         {
+             if(!peso.valor && !altura.valor)
+             {
+                 peso.style.border = '1px vermelho sólido';
+                 altura.style.border = '1px vermelho sólido';
+             }
+             senão if(!peso.value)
+             {
+                 peso.style.border = '1px vermelho sólido';
+             }
+             senão
+             {
+                 altura.style.border = '1px vermelho sólido';
+             }
+         }
+         senão
+         {
+             let imc = peso.valor / (altura.valor * altura.valor);
+             const resultado = document.getElementById('resultado');
+             if(imc < 18,5)
+             {
+                 console.log('Magreza');
+                 result.style.color = 'amarelo';
+                 result.innerHTML = 'Magreza |--------| Você está abaixo do peso ideal. Isso pode ser apenas uma característica pessoal, mas também pode ser um sinal de desnutrição ou algum problema de saúde. Caso seja um problema sem motivo aparente, procure um médico.';
+                 
+             }
+             senão if(imc >= 18.5 && imc < 25)
+             {
+                 console.log('Normal');
+                 result.style.color = 'SpringGreen';
+                result.inHTML = "Normal |-----------| Parabéns, você está o peso normal. Recomendamos que mantenha os hábitos com o peso normal. Especialistas adicionam de 4 a 5 porções diárias de frutas, refeições e leguminosas, além da prática de exercícios físicos - pelo menos 150 semanas.";
+                 }
+             senão if(imc >= 25 && imc < 30)
+             {
+
+                console.log('Sobrepeso');
+                 result.style.color = 'branco';
+                 Alguns.inner HTML = "Sobrepeso |AtençãoMais"resultadojásãosuficientesparaquealgumaspessoaseditenção-se associadas,como diabetes hipertensão-------|
+                  }
+             senão if(imc >= 30 && imc < 35)
+             {
+                 console.log('Obesidade: eu ');
+                 result.style.color = 'vermelho';
+                 result.innerHTML = "Obesidade: I |------------|Sinal de alerta! O excesso de peso é fator de risco para desenvolvimento de outros problemas de saúde. A boa notícia é que uma pequena perda de peso já traz benefícios à saúde. Procure um médico para definir o tratamento mais adequado para você.";
+                  }
+                  senão if(imc >= 35 && imc < 40 )
+             {
+                 console.log(' Obesidade: II');
+                 result.style.color = 'Vermelho Escuro';
+                 result.innerHTML = "Obesidade: II |-------| Sinal vermelho! Ao atingir este nível de IMC, ou risco de associados está entre alto e muito alto. Busque ajuda de um profissional de saúde; não perca tempo.";
+                  }
+             senão
+             {
+                 console.log(' Obesidade: III');
+                 result.style.color = 'preto';
+                 result.innerHTML = " Obesidade: III|--------|Sinal vermelho! Ao atingir este nível de IMC, ou risco de doenças associadas é alto. Busque ajuda de um profissional de saúde; não perca tempo." ;
+             }
+       }
+     }
+</script>
+         <div id="IMC"></div>
+      </section>
+      <script src="./assets/js/main.js"></script>
+
+      
+       <footer>Índios Capitalistas</footer>
+      
+   </body>
+</html>
